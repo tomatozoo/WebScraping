@@ -15,6 +15,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--incognito")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-setuid-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_experimental_option("excludeSwitches", ['enable-logging'])
 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
 
@@ -22,7 +28,7 @@ variable = driver.current_url
 print(variable)
 
 # 값 찾기
-driver.switch_to.frame('tradingview_42adc')
+driver.switch_to.frame('tradingview_e4436')
 wait =  WebDriverWait(driver, 10)
 
 price = driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[2]/div[1]/div[2]/table/tr[1]/td[2]/div/div[2]/div[2]/div[2]/div[2]/div[3]/div/div/div')
