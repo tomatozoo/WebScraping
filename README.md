@@ -9,4 +9,6 @@ mkdir folderUser
 chrome.exe --explicitly-allowed-ports=9222 -remote-debugging-port=9222 -user-data-dir='folderUser'
 pip install webdriver-manager
 
-* step 2. auto_scraping_version2.py 실행
+* step 2. 생긴 chrome 창에 들어가서, 원하는 사이트 설정
+
+* step 3. auto_scraping_version2.py 실행
