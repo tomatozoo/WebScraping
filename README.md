@@ -4,5 +4,8 @@
 * chrome driver version : 97 기준
 * OS : Window 64bit
 
-* 사용자 인풋
-  ID, PW 변수에 bybit 사이트의 아이디, 비밀번호 입력
+
+chrome.exe --explicitly-allowed-ports=9222
+chrome.exe -remote-debugging-port=9222 -user-data-dir='folderUser'
+
+pip install webdriver-manager
